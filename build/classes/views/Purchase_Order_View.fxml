@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="node" onKeyReleased="#print" prefHeight="750.0" prefWidth="600.0" styleClass="mainFxmlClass" stylesheets="@../assets/css/purchase_order_view.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Purchase_Order_ViewController">
+   <children>
+      <ImageView fitHeight="35.0" fitWidth="53.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/17577730_1460176047339927_230815903_n.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="72.0" layoutY="18.0" text="Stop N' Shop">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="456.0" layoutY="18.0" text="Purchase Order" textFill="#429ef4" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="15.0">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="382.0" layoutY="56.0" text="Date:" AnchorPane.topAnchor="50.0" />
+      <Label fx:id="lblDate" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="444.0" layoutY="53.0" prefHeight="19.0" prefWidth="155.0" styleClass="border-background" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="50.0" />
+      <VBox layoutX="7.0" layoutY="48.0" prefHeight="42.0" prefWidth="255.0" AnchorPane.leftAnchor="5.0">
+         <children>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lblAddress" alignment="CENTER" contentDisplay="CENTER" ellipsisString="." AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="lblContact" alignment="CENTER" contentDisplay="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <Label layoutY="152.0" prefHeight="27.0" prefWidth="284.0" style="-fx-background-color: #429ef4;" text="   Supplier" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <VBox layoutX="14.0" layoutY="179.0" prefHeight="91.0" prefWidth="264.0">
+         <children>
+            <HBox prefHeight="28.0" prefWidth="264.0">
+               <children>
+                  <AnchorPane prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="53.0" text="Name:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="28.0" prefWidth="347.0">
+                     <children>
+                        <Label fx:id="lblSupplierName" layoutX="-78.0" prefHeight="28.0" prefWidth="210.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="28.0" prefWidth="264.0">
+               <children>
+                  <AnchorPane prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="53.0" text="Address:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="28.0" prefWidth="347.0">
+                     <children>
+                        <Label fx:id="lblSupplierAddress" layoutX="-78.0" prefHeight="28.0" prefWidth="210.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="38.0" prefHeight="28.0" prefWidth="264.0">
+               <children>
+                  <AnchorPane prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="28.0" prefWidth="53.0" text="Contact:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="6.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="28.0" prefWidth="347.0">
+                     <children>
+                        <Label fx:id="lblSupplierContact" layoutX="-78.0" prefHeight="28.0" prefWidth="210.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+         </children>
+      </VBox>
+      <VBox layoutX="17.0" layoutY="270.0" prefHeight="292.0" prefWidth="580.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="250.0">
+         <children>
+            <HBox prefHeight="26.0" prefWidth="580.0" style="-fx-background-color: #429ef4;">
+               <children>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="125.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="#" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="PR CODE" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="342.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefWidth="264.0" text="PRODUCT NAME" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="210.0" layoutY="10.0" prefHeight="26.0" prefWidth="134.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="QTY" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="396.0" layoutY="10.0" prefHeight="26.0" prefWidth="178.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="79.0" text="UNIT PRICE" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="445.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" text="TOTAL" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="2.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="580.0" styleClass="border-background" VBox.vgrow="ALWAYS">
+               <children>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="174.0" prefWidth="121.0">
+                     <children>
+                        <Label fx:id="lblNum" alignment="TOP_CENTER" contentDisplay="CENTER" prefWidth="25.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="lblPrCode" alignment="TOP_CENTER" contentDisplay="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="26.0" prefWidth="342.0">
+                     <children>
+                        <Label fx:id="lblProductName" alignment="TOP_CENTER" contentDisplay="CENTER" prefWidth="264.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="210.0" layoutY="10.0" prefHeight="26.0" prefWidth="134.0">
+                     <children>
+                        <Label fx:id="lblQTY" alignment="TOP_CENTER" contentDisplay="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="396.0" layoutY="10.0" prefHeight="26.0" prefWidth="178.0">
+                     <children>
+                        <Label fx:id="lblUnitPrice" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="26.0" prefWidth="79.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="445.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="lblTotal" alignment="TOP_CENTER" contentDisplay="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+               <padding>
+                  <Insets top="3.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+      <Label layoutX="396.0" layoutY="558.0" text="Sub total:" AnchorPane.rightAnchor="150.0" AnchorPane.topAnchor="558.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblSubtotal" alignment="CENTER_RIGHT" layoutX="470.0" layoutY="558.0" prefHeight="17.0" prefWidth="120.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="558.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="396.0" layoutY="577.0" text="Discount:" AnchorPane.rightAnchor="150.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="470.0" layoutY="575.0" prefHeight="17.0" prefWidth="120.0" styleClass="border-background" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="396.0" layoutY="601.0" prefHeight="17.0" prefWidth="70.0" text="Other cost:" AnchorPane.rightAnchor="134.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="470.0" layoutY="599.0" prefHeight="17.0" prefWidth="120.0" styleClass="border-background" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="396.0" layoutY="625.0" prefHeight="17.0" prefWidth="54.0" text="Total:" AnchorPane.rightAnchor="150.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="470.0" layoutY="623.0" prefHeight="17.0" prefWidth="120.0" styleClass="border-background" AnchorPane.rightAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextArea editable="false" layoutX="10.0" layoutY="555.0" prefHeight="102.0" prefWidth="345.0" style="-fx-background-color: #429ef4;" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="555.0" />
+      <Label layoutX="12.0" layoutY="555.0" prefHeight="17.0" prefWidth="345.0" style="-fx-background-color: #429ef4;" text="    Notes and Instruction" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="555.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="714.0" prefHeight="17.0" prefWidth="507.0" text="If you have any inquries concerning this qoute, please contact Bethany Navarro on 09361276839" AnchorPane.leftAnchor="90.0" AnchorPane.rightAnchor="90.0">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="173.0" layoutY="728.0" prefHeight="17.0" prefWidth="255.0" text="97 San Jose Extension, Dumaguete City Negros Oriental">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="222.0" layoutY="664.0" text="This is not tax invoice!" textFill="#fc0606">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TextField editable="false" layoutX="10.0" layoutY="686.0" prefHeight="25.0" prefWidth="175.0" promptText="Date" style="-fx-background-color: #ffffff;" styleClass="border-background" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="685.0">
+         <font>
+            <Font name="System Italic" size="9.0" />
+         </font>
+      </TextField>
+      <TextField editable="false" layoutX="20.0" layoutY="696.0" prefHeight="25.0" prefWidth="175.0" promptText="Authorize signature" style="-fx-background-color: #ffffff;" styleClass="border-background" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="685.0">
+         <font>
+            <Font name="System Italic" size="9.0" />
+         </font>
+      </TextField>
+   </children>
+</AnchorPane>

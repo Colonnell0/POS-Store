@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" onKeyReleased="#setViewClose" prefHeight="700.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" styleClass="mainFxmlClass" stylesheets="@../assets/css/accountsdashboard.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AddAccountController">
+   <children>
+      <Label fx:id="lblTitle" layoutX="14.0" layoutY="14.0" text="Add account">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="15.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/User%20Credentials-32.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Label>
+      <Pane layoutX="217.0" layoutY="41.0" styleClass="background-color">
+         <children>
+            <ImageView fx:id="imgProfile" fitHeight="120.0" fitWidth="120.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#setImageFileChooser" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/images/user_account_avatar.png" />
+               </image>
+            </ImageView>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Pane>
+      <ComboBox fx:id="cmbAccountStatus" layoutX="216.0" layoutY="196.0" prefWidth="150.0" style="-fx-background-color: #ffffff;" />
+      <Label fx:id="lblFirstname" layoutX="97.0" layoutY="295.0" text="Firstname">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblLastname" layoutX="360.0" layoutY="295.0" text="Lastname">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblMI" layoutX="307.0" layoutY="295.0" text="M.I">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="234.0" styleClass="double-underline" text="User Information     " AnchorPane.leftAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="274.0" text="Name:" AnchorPane.leftAnchor="45.0" />
+      <Label layoutX="45.0" layoutY="317.0" text="Address:" AnchorPane.leftAnchor="45.0" />
+      <Label fx:id="lblStreet" layoutX="97.0" layoutY="338.0" text="Street">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblBarangay" layoutX="349.0" layoutY="338.0" text="Barangay" AnchorPane.leftAnchor="349.0">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCity" layoutX="97.0" layoutY="384.0" text="City">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblProvince" layoutX="315.0" layoutY="384.0" text="Province">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="397.0" text="Gender:" AnchorPane.leftAnchor="45.0" />
+      <Label layoutX="45.0" layoutY="469.0" text="Contact" AnchorPane.leftAnchor="45.0" />
+      <Label layoutX="34.5" layoutY="501.0" styleClass="double-underline" text="Account Information     " AnchorPane.leftAnchor="30.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="42.0" layoutY="595.0" text="Username:" AnchorPane.leftAnchor="42.0" />
+      <Label layoutX="44.5" layoutY="624.0" text="Password:" AnchorPane.leftAnchor="40.0" />
+      <Label layoutX="35.0" layoutY="559.0" text="Account type:" AnchorPane.leftAnchor="40.0" />
+      <Button fx:id="btnSubmit" layoutX="418.0" layoutY="661.0" mnemonicParsing="false" onMouseClicked="#submit" prefWidth="60.0" style="-fx-background-color: #009688;" text="Submit" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button layoutX="483.0" layoutY="661.0" mnemonicParsing="false" onMouseClicked="#setViewCloseClick" prefWidth="60.0" style="-fx-background-color: #03A9F4;" text="Cancel" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <ImageView fitHeight="19.0" fitWidth="23.0" layoutX="354.0" layoutY="5.0" onMouseClicked="#setViewCloseClick" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <image>
+            <Image url="@../assets/images/Delete.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="lblUsername" layoutX="314.0" layoutY="404.0" prefHeight="15.0" prefWidth="82.0">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtFirstname" layoutX="96.0" layoutY="270.0" onKeyReleased="#getFirstname" prefHeight="25.0" prefWidth="202.0" promptText="Firstname" AnchorPane.leftAnchor="90.0" />
+      <TextField fx:id="txtMI" layoutX="303.0" layoutY="270.0" onKeyReleased="#getMI" prefHeight="25.0" prefWidth="46.0" promptText="M.I" />
+      <TextField fx:id="txtLastname" layoutX="350.0" layoutY="270.0" onKeyReleased="#getLastname" prefHeight="25.0" prefWidth="202.0" promptText="Lastname" AnchorPane.rightAnchor="40.0" />
+      <TextField fx:id="txtStreet" layoutX="90.0" layoutY="313.0" onKeyReleased="#getStreet" prefHeight="25.0" prefWidth="242.0" promptText="road, street blk no." AnchorPane.leftAnchor="90.0" />
+      <TextField fx:id="txtBarangay" layoutX="342.0" layoutY="313.0" onKeyReleased="#getBarangayError" prefHeight="25.0" prefWidth="215.0" promptText="Barangay" AnchorPane.rightAnchor="43.0" />
+      <TextField fx:id="txtCity" layoutX="92.0" layoutY="359.0" onKeyReleased="#getCityError" prefHeight="25.0" prefWidth="202.0" promptText="City" AnchorPane.leftAnchor="92.0" />
+      <TextField fx:id="txtProvince" layoutX="306.0" layoutY="358.0" onKeyReleased="#getProvinceError" prefHeight="25.0" prefWidth="249.0" promptText="Province" AnchorPane.rightAnchor="45.0" />
+      <RadioButton fx:id="radioMale" layoutX="100.0" layoutY="414.0" mnemonicParsing="false" onAction="#getGender" text="Male" AnchorPane.leftAnchor="100.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+         <toggleGroup>
+            <ToggleGroup fx:id="groupGender" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="radioFemale" layoutX="100.0" layoutY="437.0" mnemonicParsing="false" onAction="#getGender" text="Female" toggleGroup="$groupGender" AnchorPane.leftAnchor="100.0">
+         <font>
+            <Font size="11.0" />
+         </font>
+      </RadioButton>
+      <TextField fx:id="txtContact" layoutX="90.0" layoutY="465.0" onKeyReleased="#getContact" prefHeight="25.0" prefWidth="173.0" promptText="0999 999 9999" AnchorPane.leftAnchor="90.0" />
+      <ComboBox fx:id="cmbBranch" layoutX="153.5" layoutY="522.0" prefHeight="25.0" prefWidth="249.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="200.0" />
+      <ComboBox fx:id="cmbAccountType" layoutX="153.5" layoutY="555.0" prefHeight="25.0" prefWidth="242.0" style="-fx-background-color: #ffffff;" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="200.0" />
+      <TextField fx:id="txtUsername" layoutX="150.0" layoutY="591.0" onKeyReleased="#getUsernameError" prefHeight="25.0" prefWidth="173.0" promptText="Username" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="200.0" />
+      <PasswordField fx:id="txtPassword" layoutX="150.0" layoutY="620.0" onKeyReleased="#getPassword" prefHeight="25.0" prefWidth="173.0" promptText="Password" AnchorPane.leftAnchor="150.0" AnchorPane.rightAnchor="200.0" />
+      <Label layoutX="49.0" layoutY="532.0" text="Branch:" AnchorPane.leftAnchor="40.0" />
+      <Label fx:id="lblGender" layoutX="92.0" layoutY="397.0" text="*" />
+      <Label fx:id="lblUsernameError" layoutX="404.0" layoutY="595.0" prefHeight="17.0" prefWidth="194.0" AnchorPane.rightAnchor="5.0">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblPasswordError" layoutX="396.0" layoutY="624.0" prefHeight="17.0" prefWidth="194.0" AnchorPane.rightAnchor="5.0">
+         <font>
+            <Font name="System Italic" size="10.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,27 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.custom-dashed-border {
+    -fx-border-color: #000000 ;
+    -fx-border-width: 1 ; 
+    -fx-border-style: segments(2, 5, 5, 5)  line-cap round ;
+}
+.separator *.line { 
+    -fx-border-style: solid;
+    -fx-border-width: 1px;
+
+}
+.separator *.line {
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 1 0; /* its make really one-pixel-border */
+    -fx-border-color: #000000;
+}
+.separator-red {
+    -fx-border-style: solid;
+    -fx-border-width: 0 0 1 0; /* its make really one-pixel-border */
+    -fx-border-color: #ff0000;
+}

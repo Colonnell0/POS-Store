@@ -1,0 +1,116 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.btn-supplier{
+    -fx-background-color: 	#ffffff;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-border-color: #429ef4;
+    -fx-graphic: url('/assets/images/delivery-truck.png');
+
+}
+.btn-transaction{
+    -fx-background-color: 	#ffffff;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-border-color: #429ef4;
+    -fx-graphic: url('/assets/images/increasing-line-graphic-of-business.png');
+
+}
+.btn-product{
+    -fx-background-color: 	#ffffff;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-border-color: #429ef4;
+    -fx-graphic: url('/assets/images/boxes.png');
+
+}
+.btn-account{
+    -fx-background-color: 	#ffffff;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-border-color: #429ef4;
+    -fx-graphic: url('/assets/images/accounts.png');
+
+}
+.btn-sales{
+    -fx-background-color: 	#ffffff;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-border-color: #429ef4;
+    -fx-graphic: url('/assets/images/incomes.png');
+
+}
+
+.btn-reserved{
+    -fx-background-color: 	#ffffff;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-border-color: #429ef4;
+
+
+}
+/********************
+*
+*********************/
+.btn-supplier:hover{
+    -fx-background-color: 	#429ef4;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-border-color: #429ef4;
+    -fx-graphic: url('/assets/images/delivery-truck-white.png');
+    -fx-text-fill: #ffffff;
+
+}
+.btn-transaction:hover{
+    -fx-background-color: 	#429ef4;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-border-color: #429ef4;
+    -fx-graphic: url('/assets/images/increasing-line-graphic-of-business-white.png');
+    -fx-text-fill: #ffffff;
+
+}
+.btn-product:hover{
+    -fx-background-color: 	#429ef4;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-border-color: #429ef4;
+    -fx-graphic: url('/assets/images/boxes-white.png');
+    -fx-text-fill: #ffffff;
+
+}
+.btn-account:hover{
+    -fx-background-color: 	#429ef4;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-border-color: #429ef4;
+    -fx-graphic: url('/assets/images/Account-white.png');
+    -fx-text-fill: #ffffff;
+
+}
+.btn-sales:hover{
+    -fx-background-color: 	#429ef4;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    -fx-border-color: #429ef4;
+    -fx-graphic: url('/assets/images/incomes-white.png');
+    -fx-text-fill: #ffffff;
+
+}
+.border-background{	
+    -fx-border-color: #429ef4;
+}
+.login-indicator{
+    -fx-background-radius: 5em;
+}
+.cmb-background{
+    -fx-border-color: #429ef4;
+    -fx-background-color:	#ffffff;
+    -fx-font: bold 10pt "Arial";
+}
+.pane-circle{
+    -fx-background-radius: 5em;
+    -fx-min-width: 30px;
+    -fx-min-height: 30px;
+    -fx-max-width: 30px;
+    -fx-max-height: 30px;
+    -fx-background-insets: 0px;
+    -fx-padding: 0px;
+}
+
+
+

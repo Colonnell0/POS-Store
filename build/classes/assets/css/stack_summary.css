@@ -1,0 +1,50 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.table-view .column-header-background{
+    -fx-background-color:#429ef4;
+    -fx-base: #0777E3;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+    -fx-font: bold;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+.border-background{	
+    -fx-border-color: #429ef4;
+}
+.button-submit{
+    -fx-background-color: #429ef4;
+    -fx-text-fill: #ffffff;
+}
+.font-cmb{
+    -fx-font: bold 8pt "Arial";
+}
+.double-underline {
+    -fx-text-fill: #429ef4;
+    -fx-font: bold 16pt "Arial";
+    -fx-underline: true;
+}
+.double-underline-label {
+    -fx-border-color: black, transparent, black;
+    -fx-border-width: 0 0 1 0, 0 0 1 0, 0 0 1 0;
+    -fx-border-insets: 0 0 1 0, 0 0 2 0, 0 0 3 0;
+}
+.circle{
+    -fx-background-radius: 5em;
+    -fx-min-width: 20px;
+    -fx-min-height: 20px;
+    -fx-max-width: 20px;
+    -fx-max-height: 20px;
+}
+
+

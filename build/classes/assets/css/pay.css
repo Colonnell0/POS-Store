@@ -1,0 +1,30 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.border-background{
+
+    -fx-border-color: #429ef4;
+}
+.border-radius-transaction{
+    -fx-border-radius:20;
+    -fx-background-radius:20;
+
+}
+.circle{
+    -fx-background-radius: 5em;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-max-width: 40px;
+    -fx-max-height: 40px;
+}
+.drop-shadow{
+    -fx-background-color: 	#ecf0f1;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+}
+.pay-009688{
+    -fx-text-fill:	 #009688;
+}

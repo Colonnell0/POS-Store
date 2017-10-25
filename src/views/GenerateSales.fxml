@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="350.0" styleClass="custom-dashed-border" stylesheets="@../assets/css/generatesales.css" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.GenerateSalesController">
+    <children>
+        <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+            <children>
+                <Label fx:id="lblBranch" alignment="TOP_CENTER" contentDisplay="CENTER" prefHeight="80.0" prefWidth="350.0" textAlignment="CENTER" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                    </VBox.margin>
+                </Label>
+                <Label alignment="TOP_CENTER" layoutX="20.0" layoutY="20.0" prefHeight="10.0" prefWidth="350.0" text="******************************************************">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                    </VBox.margin>
+                </Label>
+                <Label prefHeight="19.0" prefWidth="362.0" text="Sales receipt">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets left="5.0" right="5.0" />
+                    </VBox.margin>
+                </Label>
+                <HBox prefHeight="20.0" prefWidth="200.0">
+                    <VBox.margin>
+                        <Insets left="25.0" right="25.0" top="10.0" />
+                    </VBox.margin>
+                    <children>
+                        <Label prefHeight="17.0" prefWidth="95.0" text="Ref ID:">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblRefID" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="223.0">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox layoutX="35.0" layoutY="148.0" prefHeight="20.0" prefWidth="200.0">
+                    <children>
+                        <Label prefHeight="17.0" prefWidth="108.0" text="Accound name:">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblAccountName" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="223.0">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox layoutX="35.0" layoutY="168.0" prefHeight="20.0" prefWidth="200.0">
+                    <children>
+                        <Label prefHeight="17.0" prefWidth="108.0" text="Date:">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblDate" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="223.0">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="25.0" right="25.0" />
+                    </VBox.margin>
+                </HBox>
+                <Label alignment="TOP_CENTER" layoutX="15.0" layoutY="100.0" prefHeight="10.0" prefWidth="350.0" text="******************************************************">
+                    <font>
+                        <Font name="System Bold" size="13.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="5.0" />
+                    </VBox.margin>
+                </Label>
+                <HBox layoutX="35.0" layoutY="188.0" prefHeight="20.0" prefWidth="200.0">
+                    <children>
+                        <Label prefHeight="17.0" prefWidth="108.0" text="Total product sold:">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblProductSold" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="200.0">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="20.0" right="20.0" top="20.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox layoutX="30.0" layoutY="252.0" prefHeight="20.0" prefWidth="200.0">
+                    <children>
+                        <Label prefHeight="17.0" prefWidth="143.0" text="Amount to be recieved">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lblAmount" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="165.0" textFill="#d01e1e">
+                            <font>
+                                <Font name="System Bold Italic" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </VBox.margin>
+                </HBox>
+                <AnchorPane prefHeight="130.0" prefWidth="348.0">
+                    <children>
+                        <Separator layoutX="14.0" layoutY="45.0" prefWidth="200.0" AnchorPane.leftAnchor="15.0" />
+                        <Label fx:id="lblCashier" alignment="CENTER" layoutX="2.0" layoutY="28.0" prefHeight="17.0" prefWidth="221.0" AnchorPane.leftAnchor="2.0">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="97.0" layoutY="45.0" text="Cashier">
+                            <font>
+                                <Font name="System Italic" size="11.0" />
+                            </font>
+                        </Label>
+                        <Separator layoutX="140.0" layoutY="100.0" prefWidth="200.0" AnchorPane.rightAnchor="15.0" />
+                        <Label fx:id="lblOwner" alignment="CENTER" layoutX="127.0" layoutY="83.0" prefHeight="17.0" prefWidth="221.0" AnchorPane.rightAnchor="2.0">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="220.0" layoutY="100.0" text="Owner">
+                            <font>
+                                <Font name="System Italic" size="11.0" />
+                            </font>
+                        </Label>
+                        <Separator layoutX="167.0" layoutY="13.0" prefWidth="100.0" styleClass="separator-red" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

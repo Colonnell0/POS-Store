@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" stylesheets="@../assets/css/product_list.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Product_ListController">
+   <children>
+      <TextField fx:id="txtProductNameCode" layoutY="14.0" onKeyReleased="#tabulate_data" prefHeight="40.0" prefWidth="567.0" promptText="Product cod or name..." styleClass="border-background" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="tblProductList" layoutX="74.0" layoutY="106.0" onKeyReleased="#key_event" prefHeight="339.0" prefWidth="600.0" styleClass="border-background" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="60.0">
+        <columns>
+          <TableColumn fx:id="tbcProductCode" maxWidth="8000.0" prefWidth="100.0" style="-fx-font: bold  10pt &quot;Arial&quot;;" text="Product code" />
+          <TableColumn fx:id="tbcProductName" maxWidth="20000.0" prefWidth="199.0" style="-fx-font: bold  10pt &quot;Arial&quot;;" text="Product Name" />
+            <TableColumn fx:id="tbcPrice" prefWidth="75.0" style="-fx-font: bold  10pt &quot;Arial&quot;;" text="Price" />
+            <TableColumn fx:id="tbcNumber" prefWidth="75.0" style="-fx-font: bold  10pt &quot;Arial&quot;;" text="Stocks" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </children>
+</AnchorPane>

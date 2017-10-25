@@ -1,0 +1,21 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.separator-double-underline {
+    -fx-border-color: #429ef4;
+    -fx-border-width: 0 0 1 0;
+    -fx-underline: true;
+
+}
+.background-image{
+    -fx-background-image: url("/assets/images/Barcode-Scan-and-Print.gif");
+    -fx-background-size: cover;
+    -fx-opacity:0.2;
+}
+.border-background{	
+    -fx-border-color: #429ef4;
+}

@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="650.0" prefWidth="850.0" styleClass="mainFxmlClass" stylesheets="@../assets/css/admindashboard.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminDashboardController">
+   <children>
+      <AnchorPane prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #429ef4;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="-30.0" layoutY="-70.0" prefHeight="150.0" prefWidth="1.0" style="-fx-background-color: #dddddd;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="0.0" />
+            <HBox layoutY="87.0" prefHeight="28.0" prefWidth="229.0" spacing="20.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="15.0">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/images/user.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lblAccountName" prefHeight="30.0" prefWidth="257.0" text="Label" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <MenuBar style="-fx-background-color: #429ef4;">
+                     <menus>
+                        <Menu mnemonicParsing="false">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#Logout" text="Logout" />
+                          </items>
+                           <graphic>
+                              <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../assets/images/angle-arrow-down.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Menu>
+                     </menus>
+                  </MenuBar>
+               </children>
+            </HBox>
+            <Label fx:id="lblHead" layoutX="214.0" layoutY="36.0" prefHeight="28.0" prefWidth="292.0" text="Dashboard" textFill="WHITE" AnchorPane.leftAnchor="182.0" AnchorPane.topAnchor="22.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="50.0" fitWidth="50.0" layoutX="-47.0" layoutY="-46.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="8.0">
+               <image>
+                  <Image url="@../assets/images/17577730_1460176047339927_230815903_n.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane prefHeight="100.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
+         <children>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="200.0" spacing="50.0" styleClass="btn-reserved" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="60.0" AnchorPane.topAnchor="70.0">
+               <children>
+                  <AnchorPane prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="47.0" prefWidth="530.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                                 <image>
+                                    <Image url="@../assets/images/amount.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox prefHeight="50.0" prefWidth="150.0">
+                                 <children>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="lblAmount" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font></Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="100.0" text="Total Amount" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                       </children></AnchorPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+                  <AnchorPane layoutX="279.0" layoutY="10.0" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="47.0" prefWidth="530.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                                 <image>
+                                    <Image url="@../assets/images/sold.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox prefHeight="50.0" prefWidth="150.0">
+                                 <children>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="lblSold" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="100.0" text="Total Product Sold" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+                  <AnchorPane layoutX="375.0" layoutY="10.0" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="47.0" prefWidth="530.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                                 <image>
+                                    <Image url="@../assets/images/barcode.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox prefHeight="50.0" prefWidth="150.0">
+                                 <children>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="lblAvailable" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="100.0" text="Available Product" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+                  <AnchorPane layoutX="37.0" layoutY="10.0" prefHeight="50.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="47.0" prefWidth="530.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="ALWAYS">
+                                 <image>
+                                    <Image url="@../assets/images/shopping-basket.png" />
+                                 </image>
+                              </ImageView>
+                              <VBox prefHeight="50.0" prefWidth="150.0">
+                                 <children>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label fx:id="lblPurchase" alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font name="System Bold" size="13.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0" prefWidth="100.0" text="Total purchase" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                     <HBox.margin>
+                        <Insets bottom="10.0" top="10.0" />
+                     </HBox.margin>
+                  </AnchorPane>
+               </children>
+            </HBox>
+            <ComboBox fx:id="cmbType" layoutX="53.0" layoutY="14.0" onAction="#setLineGraph" prefHeight="35.0" prefWidth="180.0" styleClass="cmb-background" AnchorPane.leftAnchor="60.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets></ComboBox>
+            <ComboBox fx:id="cmbBranch" layoutX="251.0" layoutY="24.0" onAction="#setBranchID" prefHeight="35.0" prefWidth="268.0" styleClass="cmb-background" AnchorPane.topAnchor="15.0">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </ComboBox>
+         </children>
+      </AnchorPane>
+      <VBox layoutY="218.0" prefHeight="432.0" prefWidth="850.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="200.0">
+         <children>
+            <AnchorPane prefHeight="506.0" prefWidth="800.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <AnchorPane prefHeight="317.0" prefWidth="394.0" HBox.hgrow="ALWAYS">
+                           <children>
+                              <LineChart fx:id="lcGraph" legendSide="RIGHT" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </LineChart>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane maxHeight="350.0" prefWidth="339.0" styleClass="border-background">
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </HBox.margin>
+                           <children>
+                              <HBox layoutX="4.0" layoutY="3.0" prefHeight="30.0" prefWidth="333.0" spacing="5.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="2.0">
+                                 <children>
+                                    <AnchorPane fx:id="pStatus" prefWidth="10.0" styleClass="login-indicator">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </AnchorPane>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                       <children>
+                                          <Label fx:id="lblStatus" text="Available" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <font>
+                                                <Font name="System Bold" size="10.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                              <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="30.0">
+                                 <children>
+                                    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+                                       <children>
+                                          <ImageView fitWidth="40.0" onMouseClicked="#setAccountPrev" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/images/left-arrow.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="imgProfile" fitWidth="120.0" pickOnBounds="true" preserveRatio="true" />
+                                          <ImageView fitWidth="40.0" onMouseClicked="#setAccountNext" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../assets/images/right-arrow.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="30.0" layoutY="100.0" prefHeight="20.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <AnchorPane prefHeight="100.0" prefWidth="63.0">
+                                             <children>
+                                                <Label text="Position:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label fx:id="lblPosition" text="Administrator" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="20.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <AnchorPane prefHeight="100.0" prefWidth="63.0">
+                                             <children>
+                                                <Label text="Name:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label fx:id="lblName" text="Andrew D. Lopez" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="30.0" layoutY="160.0" prefHeight="20.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <AnchorPane prefHeight="100.0" prefWidth="63.0">
+                                             <children>
+                                                <Label text="Address:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label fx:id="lblAddress" text="Banilad Baptist Dumaguete City" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="30.0" layoutY="220.0" prefHeight="20.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <AnchorPane prefHeight="100.0" prefWidth="63.0">
+                                             <children>
+                                                <Label text="Contact:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label fx:id="lblContact" text="099999999999" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="30.0" layoutY="240.0" prefHeight="20.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <AnchorPane prefHeight="100.0" prefWidth="63.0">
+                                             <children>
+                                                <Label text="Total sales:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label fx:id="lblTotalSale" text="Php 200,2200" textFill="RED" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="20.0" right="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox layoutX="30.0" layoutY="250.0" prefHeight="20.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="ALWAYS">
+                                       <children>
+                                          <AnchorPane prefHeight="100.0" prefWidth="63.0">
+                                             <children>
+                                                <Label prefHeight="24.0" prefWidth="63.0" text="Date:" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                          <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                             <children>
+                                                <Label fx:id="lblDate" text="April 10, 2017" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="423.0" prefWidth="850.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="100.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="50.0">
+                     <children>
+                        <HBox prefHeight="60.0" spacing="50.0">
+                           <children>
+                              <AnchorPane HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Button fx:id="btnProduct" alignment="BOTTOM_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#product" prefWidth="300.0" styleClass="btn-product" textAlignment="JUSTIFY" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Button fx:id="btnTransaction" alignment="BOTTOM_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#transaction" prefWidth="300.0" styleClass="btn-transaction" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Button>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="10.0" layoutY="10.0" prefHeight="60.0" spacing="50.0">
+                           <children>
+                              <AnchorPane HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Button fx:id="btnAccounts" alignment="BOTTOM_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#account" prefWidth="300.0" styleClass="btn-account" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS">
+                                 <children>
+                                    <Button fx:id="btnSales" alignment="BOTTOM_LEFT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#sales" prefWidth="300.0" styleClass="btn-sales" wrapText="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font></Button>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

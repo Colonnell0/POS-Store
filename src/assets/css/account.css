@@ -1,0 +1,31 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.table-view .column-header-background{
+    -fx-background-color:#429ef4;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+.background-color{
+    -fx-border-color: 	#429ef4;
+    -fx-border-width: 2;
+}
+.cmb-background{
+    -fx-background-color: #5586FF;
+    -fx-text-fill: #ffffff;
+    -fx-font: bold 8pt "Arial";
+}
+
+
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="450.0" prefWidth="700.0" styleClass="mainFxmlClass" stylesheets="@../assets/css/purchase_order.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Purchase_OrderController">
+   <children>
+      <TableView fx:id="tblPurchaseOrder" layoutX="-7.0" layoutY="72.0" prefHeight="332.0" prefWidth="700.0" stylesheets="@../assets/css/purchase_order.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="tbcProductCode" prefWidth="75.0" style="-fx-font: bold 9pt &quot;Aerial&quot;;" text="Product code" />
+          <TableColumn fx:id="tbcProductName" maxWidth="8000.0" prefWidth="192.0" style="-fx-font: bold 9pt &quot;Aerial&quot;;" text="Product name" />
+            <TableColumn fx:id="tbcSupplierName" maxWidth="10000.0" prefWidth="86.0" style="-fx-font: bold 9pt &quot;Aerial&quot;;" styleClass="double-underline" text="Supplier" />
+            <TableColumn fx:id="tbcSupplierPrice" prefWidth="75.0" style="-fx-font: bold 9pt &quot;Aerial&quot;;" text="Supplier Price" />
+            <TableColumn fx:id="tbcQtyUM" prefWidth="75.0" style="-fx-font: bold 9pt &quot;Aerial&quot;;" text="Qty UM" />
+            <TableColumn fx:id="tbcTotal" prefWidth="75.0" style="-fx-font: bold 9pt &quot;Aerial&quot;;" text="Total" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <TextField fx:id="txtProductCodeName" layoutY="25.0" onKeyReleased="#setProductCodeName" prefHeight="30.0" styleClass="border-background" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <ComboBox fx:id="cmbBranch" layoutX="67.0" layoutY="28.0" onAction="#setBranch" prefHeight="30.0" prefWidth="280.0" style="-fx-background-color: #ffffff; -fx-font: bold 9pt &quot;Aerial&quot;;" styleClass="border-background" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0" />
+      <ComboBox fx:id="cmbSupplier" layoutY="26.0" onAction="#setSupplier" prefHeight="27.0" prefWidth="203.0" style="-fx-background-color: #ffffff; -fx-font: bold 9pt &quot;Aerial&quot;;" styleClass="border-background" />
+   </children>
+</AnchorPane>

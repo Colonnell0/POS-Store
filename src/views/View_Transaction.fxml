@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="400.0" styleClass="border-background" stylesheets="@../assets/css/pay.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.View_TransactionController">
+   <children>
+      <Label alignment="CENTER" layoutX="75.0" layoutY="14.0" prefHeight="42.0" prefWidth="280.0" style="-fx-background-color: #000000;" styleClass="border-radius-transaction" text="Receipt Transaction" textAlignment="CENTER" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Pane layoutY="55.0" prefHeight="45.0" prefWidth="45.0" style="-fx-background-color: #ffffff;" styleClass="circle" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0" />
+      <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="20.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/images/check-mark.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="61.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="70.0">
+         <styleClass>
+            <String fx:value="drop-shadow" />
+            <String fx:value="border-background" />
+         </styleClass>
+         <children>
+            <ScrollPane hbarPolicy="NEVER" layoutX="14.0" layoutY="39.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <content>
+                  <VBox prefHeight="510.0" prefWidth="377.0">
+                     <children>
+                        <Label fx:id="branchName" alignment="CENTER" prefHeight="30.0" prefWidth="375.0" text="Label" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="18.0" prefWidth="347.0" spacing="30.0">
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label prefWidth="70.0" text="Ref #:">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="refID" alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="260.0" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="25.0" layoutY="31.0" prefHeight="18.0" prefWidth="347.0" spacing="30.0">
+                           <children>
+                              <Label prefWidth="70.0" text="Date:">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="date" alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="260.0" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="25.0" layoutY="79.0" prefHeight="18.0" prefWidth="347.0" spacing="30.0">
+                           <children>
+                              <Label prefHeight="19.0" prefWidth="198.0" text="Transaction type:">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="type" alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="141.0" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox layoutX="25.0" layoutY="50.0" prefHeight="18.0" prefWidth="347.0" spacing="30.0">
+                           <children>
+                              <Label prefHeight="20.0" prefWidth="70.0" text="Served by:">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="lblAccountName" alignment="CENTER_RIGHT" prefHeight="19.0" prefWidth="260.0" textAlignment="JUSTIFY">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <Label prefHeight="25.0" prefWidth="375.0" text="--------------------------------------------------------------------------">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefWidth="375.0" text="Product list:">
+                           <VBox.margin>
+                              <Insets left="15.0" right="15.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="20.0" prefWidth="375.0" />
+                        <Label fx:id="lblTransactionBasket" prefWidth="375.0" wrapText="true" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label prefHeight="20.0" prefWidth="375.0" />
+                        <HBox>
+                           <VBox.margin>
+                              <Insets left="20.0" right="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <Label prefHeight="19.0" prefWidth="99.0" text="Total Amount:" textFill="#ff2d2d">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="amount" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="238.0" textAlignment="JUSTIFY" textFill="#ff2d2d">
+                                 <font>
+                                    <Font name="System Bold" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+      <Label layoutX="-28.0" layoutY="239.0" text="Label" />
+   </children>
+</AnchorPane>

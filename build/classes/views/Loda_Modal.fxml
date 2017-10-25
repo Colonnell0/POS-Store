@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" onKeyReleased="#setViewClose" prefHeight="250.0" prefWidth="400.0" styleClass="login-back" stylesheets="@../assets/css/loda_modal.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.Loda_ModalController">
+   <children>
+      <AnchorPane layoutX="30.0" layoutY="14.0" prefHeight="200.0" prefWidth="200.0" styleClass="login-background" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <TextField fx:id="txtCpNum" layoutX="114.0" layoutY="50.0" prefHeight="25.0" prefWidth="245.0" promptText="0999 999 9999" styleClass="border-background">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label fx:id="lblLabel" alignment="CENTER" prefHeight="41.0" prefWidth="380.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="20.0" layoutY="56.0" text="Mobile num:" AnchorPane.leftAnchor="20.0">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtLoad" layoutX="115.0" layoutY="87.0" prefHeight="25.0" prefWidth="245.0" promptText="0" styleClass="border-background">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="21.0" layoutY="93.0" text="Load:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPrice" layoutX="115.0" layoutY="122.0" prefHeight="25.0" prefWidth="245.0" promptText="Php 0.0" styleClass="border-background">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="21.0" layoutY="129.0" text="Price">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button layoutX="159.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#setSubmit" prefHeight="35.0" prefWidth="66.0" style="-fx-background-color: #009688;" text="Submit" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="248.0" layoutY="170.0" mnemonicParsing="false" onMouseClicked="#setCancel" prefHeight="35.0" prefWidth="66.0" style="-fx-background-color: #03A9F4;" text="Cancel" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

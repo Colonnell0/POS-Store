@@ -1,0 +1,51 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+.rounded-imageview{
+    -fx-border-radius: 10 10 10 10;
+    -fx-background-radius: 5;
+}
+.separator-dddddd{
+    -fx-border-color: #dddddd;
+    -fx-border-width: 0 0 0 1;
+}
+.border-curve{
+
+    -fx-background-color:#ffffff;
+    -fx-background-radius: 0.5em;
+    -fx-border-radius: 0.5em 0.5em 0.5em 0.5em;
+    -fx-border-color: #000000;
+    -fx-border-width: 0.5;
+}
+.border-uppercurve{
+
+    -fx-background-color:  
+        linear-gradient(#88bfe8 0%,#70b0e0 100%);
+    -fx-background-radius: 5;
+    -fx-border-radius: 0.5em 0.5em 0 0;
+    -fx-border-color: #000000;
+    -fx-background-radius:  0.5em 0.5em 0 0;
+    -fx-border-width: 0 0 0.5 0;	 
+}
+.border-background{
+
+    -fx-border-color: #429ef4;
+}
+.table-view .column-header-background{
+    -fx-background-color:#429ef4;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: #ffffff;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+

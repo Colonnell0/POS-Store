@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="pane" prefHeight="435.0" prefWidth="635.0" styleClass="mainFxmlClass" stylesheets="@../assets/css/pay.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.PAYController">
+   <children>
+      <SplitPane dividerPositions="0.45" layoutX="140.0" layoutY="105.0" prefHeight="160.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="398.0" prefWidth="204.0" style="-fx-background-color: #ffffff;" styleClass="border-background">
+               <children>
+                  <Label alignment="CENTER" layoutX="42.0" layoutY="30.0" prefHeight="40.0" prefWidth="188.0" style="-fx-background-color: #000000;" styleClass="border-radius-transaction" text="Receipt transaction" textFill="WHITE" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Pane layoutX="15.0" layoutY="10.0" prefHeight="62.0" prefWidth="41.0" style="-fx-background-color: #ffffff;" styleClass="circle" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0" />
+                  <ImageView fitHeight="150.0" fitWidth="40.0" layoutX="18.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="10.0">
+                     <image>
+                        <Image url="@../assets/images/check-mark.png" />
+                     </image>
+                  </ImageView>
+                  <AnchorPane layoutX="22.0" layoutY="63.0" prefHeight="319.0" prefWidth="224.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
+                     <styleClass>
+                        <String fx:value="drop-shadow" />
+                        <String fx:value="border-background" />
+                     </styleClass>
+                     <children>
+                        <ScrollPane hbarPolicy="NEVER" layoutX="3.0" layoutY="3.0" pannable="true" prefHeight="354.0" prefWidth="266.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+                           <content>
+                              <VBox fx:id="vbList" prefHeight="350.0" prefWidth="255.0">
+                                 <children>
+                                    <Label fx:id="lblShopInfo" alignment="TOP_CENTER" prefWidth="235.0" text="Label" textAlignment="CENTER" wrapText="true" VBox.vgrow="ALWAYS">
+                                       <font>
+                                          <Font name="System Bold" size="11.0" />
+                                       </font>
+                                    </Label>
+                                    <HBox layoutX="20.0" layoutY="26.0" prefHeight="15.0" prefWidth="235.0">
+                                       <children>
+                                          <Label prefHeight="58.0" prefWidth="76.0" text="Ref #:" HBox.hgrow="ALWAYS" />
+                                          <Label fx:id="lblRefNum" alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="231.0" textAlignment="RIGHT" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="15.0" prefWidth="235.0">
+                                       <children>
+                                          <Label prefHeight="58.0" prefWidth="76.0" text="Date:" HBox.hgrow="ALWAYS" />
+                                          <Label fx:id="lblDate" alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="231.0" textAlignment="RIGHT" />
+                                       </children>
+                                    </HBox>
+                                    <HBox layoutX="20.0" layoutY="43.0" prefHeight="15.0" prefWidth="235.0">
+                                       <children>
+                                          <Label prefHeight="58.0" prefWidth="76.0" text="Serve by:" HBox.hgrow="ALWAYS" />
+                                          <Label fx:id="lblAccountName" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="213.0" textAlignment="RIGHT" />
+                                       </children>
+                                    </HBox>
+                                    <Label alignment="CENTER" prefHeight="15.0" prefWidth="250.0" text="------------------------------------------------" textAlignment="RIGHT" />
+                                    <Label alignment="TOP_LEFT" layoutX="20.0" layoutY="94.0" prefHeight="20.0" prefWidth="250.0" text="Product list:">
+                                       <font>
+                                          <Font name="System Bold Italic" size="10.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="lblBasketTransactionList" alignment="TOP_LEFT" layoutX="20.0" layoutY="94.0" prefWidth="235.0" wrapText="true" VBox.vgrow="ALWAYS" />
+                                    <Label alignment="CENTER" layoutX="20.0" layoutY="263.0" prefHeight="15.0" prefWidth="250.0" textAlignment="RIGHT" wrapText="true" />
+                                    <VBox prefHeight="60.0" prefWidth="235.0">
+                                       <children>
+                                          <HBox prefHeight="20.0" prefWidth="200.0">
+                                             <children>
+                                                <Label prefHeight="17.0" prefWidth="132.0" text="Subtotal" />
+                                                <Label fx:id="lblPaySubtotal" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="258.0" text="0" textAlignment="RIGHT">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="10.0" layoutY="10.0" prefHeight="20.0" prefWidth="200.0">
+                                             <children>
+                                                <Label prefHeight="17.0" prefWidth="132.0" text="Disc:" />
+                                                <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="258.0" text="0" textAlignment="RIGHT">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="10.0" layoutY="30.0" prefHeight="20.0" prefWidth="200.0">
+                                             <children>
+                                                <Label prefHeight="17.0" prefWidth="132.0" text="Tax:" />
+                                                <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="258.0" text="0" textAlignment="RIGHT">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox layoutX="10.0" layoutY="50.0" prefHeight="20.0" prefWidth="200.0">
+                                             <children>
+                                                <Label prefHeight="17.0" prefWidth="132.0" text="Total:" />
+                                                <Label fx:id="lblPayTotal" alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="258.0" text="0" textAlignment="RIGHT">
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <Label alignment="CENTER" layoutX="20.0" layoutY="246.0" prefHeight="15.0" prefWidth="250.0" text="------------------------------------------------" textAlignment="RIGHT" />
+                                    <Label alignment="CENTER" prefHeight="47.0" prefWidth="235.0" text="Thank you &amp; come again!!!" textAlignment="CENTER">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" layoutX="20.0" layoutY="77.0" prefHeight="15.0" prefWidth="250.0" text="------------------------------------------------" textAlignment="RIGHT" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </VBox>
+                           </content>
+                        </ScrollPane>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="397.0" styleClass="border-background">
+               <children>
+                  <Label layoutX="11.0" layoutY="18.0" text="Total:" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="18.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtAmount" alignment="CENTER_RIGHT" layoutX="101.0" layoutY="109.0" onKeyReleased="#change_event" prefHeight="35.0" prefWidth="218.0" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="25.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="border-background" />
+                        <String fx:value="pay-009688" />
+                     </styleClass>
+                  </TextField>
+                  <TextField fx:id="txtTotal" alignment="CENTER_RIGHT" editable="false" layoutX="103.0" layoutY="11.0" prefHeight="35.0" prefWidth="218.0" styleClass="border-background" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="11.0" layoutY="89.0" prefHeight="77.0" prefWidth="73.0" text="Tendered amount:" wrapText="true" AnchorPane.leftAnchor="11.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <AnchorPane layoutX="14.0" layoutY="161.0" prefHeight="200.0" prefWidth="200.0" styleClass="border-background" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="14.0">
+                     <children>
+                        <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="77.0" prefWidth="306.0" spacing="20.0">
+                                 <children>
+                                    <Button fx:id="num_7" mnemonicParsing="false" onMouseReleased="#num_keys_7" prefHeight="40.0" prefWidth="50.0" text="7" textFill="#0e0aff">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="num_8" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseReleased="#num_keys_8" prefHeight="40.0" prefWidth="50.0" text="8" textFill="#0e0aff">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="num_9" layoutX="70.0" layoutY="10.0" mnemonicParsing="false" onMouseReleased="#num_keys_9" prefHeight="40.0" prefWidth="50.0" text="9" textFill="#0e0aff">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="77.0" prefWidth="306.0" spacing="20.0">
+                                 <children>
+                                    <Button fx:id="num_4" mnemonicParsing="false" onMouseReleased="#num_keys_4" prefHeight="40.0" prefWidth="50.0" text="4" textFill="#0e0aff">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="num_5" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseReleased="#num_keys_5" prefHeight="40.0" prefWidth="50.0" text="5" textFill="#0e0aff">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="num_6" layoutX="70.0" layoutY="10.0" mnemonicParsing="false" onMouseReleased="#num_keys_6" prefHeight="40.0" prefWidth="50.0" text="6" textFill="#0e0aff">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="77.0" prefWidth="306.0" spacing="20.0">
+                                 <children>
+                                    <Button fx:id="num_1" mnemonicParsing="false" onMouseReleased="#num_keys_1" prefHeight="40.0" prefWidth="50.0" text="1" textFill="#0e0aff">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="num_2" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseReleased="#num_keys_2" prefHeight="40.0" prefWidth="50.0" text="2" textFill="#0e0aff">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="num_3" layoutX="70.0" layoutY="10.0" mnemonicParsing="false" onMouseReleased="#num_keys_3" prefHeight="40.0" prefWidth="50.0" text="3" textFill="#0e0aff">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <HBox alignment="CENTER" layoutX="10.0" layoutY="144.0" prefHeight="77.0" prefWidth="306.0" spacing="20.0">
+                                 <children>
+                                    <Button fx:id="num_0" mnemonicParsing="false" onMouseReleased="#num_keys_0" prefHeight="40.0" prefWidth="50.0" text="0" textFill="#0e0aff">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="num_period" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onMouseReleased="#num_keys_period" prefHeight="40.0" prefWidth="50.0" text="." textFill="#0e0aff">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="num_clear" layoutX="70.0" layoutY="10.0" mnemonicParsing="false" onMouseReleased="#num_keys_clear" prefHeight="40.0" prefWidth="50.0" text="Clear" textFill="#0e0aff">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <Button layoutX="21.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#pay" prefHeight="49.0" prefWidth="110.0" style="-fx-background-color: #009688;" text="PAY" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="50.0">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="159.0" layoutY="340.0" mnemonicParsing="false" onMouseClicked="#cancel" prefHeight="49.0" prefWidth="110.0" style="-fx-background-color: #03A9F4;" text="Cancel" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="50.0">
+                     <font>
+                        <Font name="System Bold" size="23.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="11.0" layoutY="68.0" text="Change:" AnchorPane.leftAnchor="10.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtChange" alignment="CENTER_RIGHT" editable="false" layoutX="102.0" layoutY="61.0" prefHeight="35.0" prefWidth="218.0" styleClass="border-background" AnchorPane.leftAnchor="100.0" AnchorPane.rightAnchor="25.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>
